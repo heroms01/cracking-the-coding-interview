@@ -1,12 +1,14 @@
-import org.apache.poi.ss.formula.functions.T;
-
 import java.util.ArrayList;
 
 class SetOfStacks {
+    //스택리스트
     ArrayList<ArrayList<Integer>> stackList = new ArrayList();
+
+    //스택 용량
     int capacity = 2;
 
     public void push(Integer value) {
+        // 스택리스트가 비었거나 스택 용량 가득 찼다면 새로운 스택 생성
         if (stackList.isEmpty() || ((ArrayList<Integer>)getLastArrayListObject(stackList)).size() >= capacity)
             stackList.add(new ArrayList());
 
